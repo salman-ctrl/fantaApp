@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: darkorange;
+    --primary-color: #FF8000;
     --secondary-color: white;
 }
 
@@ -16,4 +16,9 @@
 
 .bg-primary {
     background-color: var(--primary-color);
+}
+
+.fotoku {
+    filter: drop-shadow(4px 2px 20px rgba(0, 0, 0, 0.4));
+
 }

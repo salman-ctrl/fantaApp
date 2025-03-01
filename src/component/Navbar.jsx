@@ -12,9 +12,9 @@ const NavMenu = [
 const Navbar = () => {
     return (
         <div className='h-20 bg-primary w-full items-center justify-evenly flex pt-20'>
-            <img src={logo} alt="" className='max-w-[120px] space-x-10' />
+            <img src={logo} alt="" className='max-w-[150px] space-x-10' />
             <ul className='flex-row flex hidden md:flex'>  {NavMenu.map((item) => (
-                <li className='list-none mr-5 font-merienda text-white font-bold'>
+                <li className='list-none mr-5 font-merienda text-2xl text-white font-bold'>
                     <a href={item.link}>{item.name}</a>
                 </li>
             ))}
