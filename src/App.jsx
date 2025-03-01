@@ -1,11 +1,10 @@
 import React from 'react'
+import Hero from './component/Hero'
 
 function App() {
   return (
-    <div>
-      <h1 className='text-red-500 '>hai there!</h1>
-    </div>
+    <Hero />
   )
 }
-
 export default App
+
