@@ -6,6 +6,15 @@ const Hero = () => {
     return (
         <div className='bg-primary h-[85vh] relative'>
             <Navbar />
+            <div>
+                <h1>Ale-Ale</h1>
+                <p>
+                    tersedia berbagai varian rasa
+                </p>
+                <button>
+                    detail
+                </button>
+            </div>
             <div className='absolute bottom-0 right-40'>
                 <img
                     src={aleMangga}
