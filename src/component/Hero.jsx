@@ -20,13 +20,13 @@ const Hero = () => {
                     </button>
                     <div className='mt-10 flex'>
                         <div data-aos='fade-right' data-aos-delay='1000'>
-                            <img src={aleMangga} alt="aleMangga" className='w-40 h-50 fotoku hover:scale-105 transition-transform duration-1000 will-change-transform' />
+                            <img src={aleMangga} alt="aleMangga" className='hover:rotate-[5deg] w-40 h-50 fotoku hover:scale-105 transition-transform duration-1000 will-change-transform' />
                         </div>
                         <div data-aos='fade-up' data-aos-delay='1000' className='ml-5'>
-                            <img src={aleJeruk} alt="" className='w-60 h-50 fotoku  hover:scale-105 transition-transform duration-500' />
+                            <img src={aleJeruk} alt="" className='w-60  hover:rotate-4 h-50 fotoku  hover:scale-105 transition-transform duration-500' />
                         </div>
                         <div data-aos='fade-left' data-aos-delay='1000'>
-                            <img src={aleAnggur} alt="" className='w-60 h-50 fotoku  hover:scale-105 transition-transform duration-500' />
+                            <img src={aleAnggur} alt="" className='w-60 h-50 fotoku hover:rotate-5 hover:scale-105 transition-transform duration-500' />
 
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const Hero = () => {
                         src={aleJeruk}
                         alt=""
 
-                        className="w-140 h-120 fotoku hover:scale-105  motion-safe:animate-bounce hover:[animation-play-state:paused] transition-transform duration-700 ease-in-out"
+                        className="w-140 h-120 fotoku hover:scale-105 hover:rotate-5 motion-safe:animate-bounce hover:[animation-play-state:paused] transition-transform duration-700 ease-in-out"
                     />
                 </div>
             </div>
