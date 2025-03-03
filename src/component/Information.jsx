@@ -1,5 +1,4 @@
 import React from 'react'
-import aleMangga from "../assets/"
 
 const Information = () => {
     return (
