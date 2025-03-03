@@ -63,7 +63,7 @@ const Hero = () => {
                         {HeroData.map((item) => (
 
                             <div key={item.id} className='text-center'>
-                                <img src={item.image} alt="" className='hover:rotate-[5deg] w-90 h-50 fotoku hover:scale-105 transition-transform duration-1000 will-change-transform' />
+                                <img src={item.image} alt="" className='hover:rotate-[5deg] w-70 h-45 fotoku hover:scale-105 transition-transform duration-1000 will-change-transform' />
                                 <h2 className='text-gray-200 text-xs line-through'>Rp.{item.diskon}</h2>
                                 <h2 className='text-white font-merienda'>{item.price}</h2>
 
