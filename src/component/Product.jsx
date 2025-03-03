@@ -7,9 +7,9 @@ const Product = () => {
     return (
         <div className='h-screen'>
             <h1>Information</h1>
-            <div className='container w-40 h-50'>
+            <div className='container w-40 h-50 bg-primary'>
                 <img src={aleJeruk} alt="" className='w-full h-30' />
-                <p>Jeruk</p>
+                <p className='text-white'>Jeruk</p>
             </div>
         </div>
     )
