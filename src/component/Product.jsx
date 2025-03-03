@@ -6,7 +6,11 @@ import aleStroberi from '../assets/aleStroberi.png'
 const Product = () => {
     return (
         <div className='h-screen'>
-            <h1>produk</h1>
+            <h1>Information</h1>
+            <div className='container'>
+                <img src={aleJeruk} alt="" />
+                <p>Jeruk</p>
+            </div>
         </div>
     )
 }
