@@ -7,8 +7,8 @@ const Product = () => {
     return (
         <div className='h-screen'>
             <h1>Information</h1>
-            <div className='container'>
-                <img src={aleJeruk} alt="" />
+            <div className='container w-40 h-50'>
+                <img src={aleJeruk} alt="" className='w-full h-30' />
                 <p>Jeruk</p>
             </div>
         </div>
