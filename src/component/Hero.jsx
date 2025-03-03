@@ -6,6 +6,17 @@ import aleAnggur from '../assets/aleAnggur.png'
 import AOS from "aos"
 import "aos/dist/aos.css";
 AOS.init();
+
+const HeroData = [
+    {
+        id: 1,
+        title: "Ale Mangga",
+        image: aleMangga,
+        description: "Ale Mangga adalah minuman beralkohol yang terbuat dari buah Mangga"
+
+    }
+]
+
 const Hero = () => {
     return (
         <div className='bg-primary h-[85vh] relative'>
@@ -27,7 +38,6 @@ const Hero = () => {
                         </div>
                         <div data-aos='fade-left' data-aos-delay='1000'>
                             <img src={aleAnggur} alt="" className='w-60 h-50 fotoku hover:rotate-5 hover:scale-105 transition-transform duration-500' />
-
                         </div>
                     </div>
                 </div>
