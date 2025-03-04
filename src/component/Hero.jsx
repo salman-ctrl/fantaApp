@@ -79,6 +79,10 @@ const Hero = () => {
         setActiveData(data);
     }
 
+    useEffect(() => {
+        AOS.init();
+        AOS.refreshHard();
+    }, [activeData])
 
     return (
         <motion.div animate={{ backgroundColor: activeData.bgColor }} transition={{ duration: 0.7 }} className=' h-[90vh] relative'>
