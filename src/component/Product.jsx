@@ -24,10 +24,6 @@ const Product = () => {
                     <img src={aleStroberi} alt="" className='w-full h-30' />
                     <p className='text-white font-merienda'>Mangga</p>
                 </div>
-                <div className='container w-40 h-50 shadow-lg bg-white'>
-                    <img src={aleStroberi} alt="" className='w-full h-30' />
-                    <p className='text-white font-merienda'>Mangga</p>
-                </div>
 
             </div>
         </div>
