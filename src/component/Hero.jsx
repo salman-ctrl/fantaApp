@@ -29,14 +29,12 @@ const SlideRight = (delay) => {
             opacity: 0,
             x: -50,
             transition: {
-                duration: 0.2,
+                duration: 0.5,
                 ease: easeInOut,
             },
         }
     };
 }
-
-
 
 const HeroData = [
     {
@@ -81,10 +79,6 @@ const Hero = () => {
         setActiveData(data);
     }
 
-    useEffect(() => {
-        AOS.init();
-        AOS.refreshHard();
-    }, [activeData])
 
     return (
         <motion.div animate={{ backgroundColor: activeData.bgColor }} transition={{ duration: 0.7 }} className=' h-[90vh] relative'>
