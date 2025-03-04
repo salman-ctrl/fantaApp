@@ -5,7 +5,38 @@ import aleAnggur from '../assets/aleAnggur.png'
 import aleStroberi from '../assets/aleStroberi.png'
 import AOS from "aos"
 import "aos/dist/aos.css";
-import { motion } from "framer-motion"
+import { AnimatePresence, delay, easeInOut, motion } from "framer-motion"
+
+
+
+
+const SlideRight = (delay) => {
+    return {
+        hidden: {
+            opacity: 0,
+            x: 100,
+        },
+        show: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.5,
+                delay: delay,
+                ease: easeInOut,
+            },
+        },
+        exit: {
+            opacity: 0,
+            x: -50,
+            transition: {
+                duration: 0.2,
+                ease: easeInOut,
+            },
+        }
+    };
+}
+
+
 
 const HeroData = [
     {
@@ -15,7 +46,7 @@ const HeroData = [
         description: "Ale Mangga adalah minuman beralkohol yang terbuat dari buah Stroberi",
         price: "Rp. 50.000",
         bgColor: "#D72638",
-        diskon: "   70.000"
+        diskon: "70.000"
 
     },
     {
@@ -60,15 +91,41 @@ const Hero = () => {
             <Navbar />
             <div className='grid grid-cols-2  h-full px-20'>
                 <div className='mt-30 '>
-                    <div key={`desc-${activeData.id}`} data-aos='fade-right' data-aos-delay='800' >
-                        <h1 className='text-5xl text-white font-merienda font-bold'>{activeData.title}</h1>
-                        <h1 className='pt-7 text-2xl font-merienda text-white'>
-                            Minuman favorit yang siap nemenin harimu! Pilih rasa favoritmu dan rasakan keseruannya</h1>
-                    </div>
+                    <div  >
+                        <AnimatePresence mode='wait'>
+                            <motion.h1
+                                key={activeData.id}
+                                variants={SlideRight(0.5)}
+                                initial="hidden"
+                                animate="show"
+                                exit="exit"
+                                className='text-5xl text-white font-merienda font-bold'>{activeData.title}</motion.h1>
+                        </AnimatePresence>
 
-                    <button data-aos='fade-down' data-aos-delay='1300' className='cursor-pointer shadow-2xl hover:scale-105 transition-transform duration-500 px-5 py-3 bg-green-600 rounded-md text-white mt-10'>
-                        Cobain Sekarang
-                    </button>
+                        <AnimatePresence mode='wait' >
+                            <motion.h1
+                                key={activeData.id}
+                                variants={SlideRight(0.4)}
+                                initial="hidden"
+                                animate="show"
+                                exit="exit"
+                                className='pt-7 text-2xl font-merienda text-white'>
+                                Minuman favorit yang siap nemenin harimu! Pilih rasa favoritmu dan rasakan keseruannya</motion.h1>
+                        </AnimatePresence>
+
+                    </div>
+                    <AnimatePresence mode='wait'>
+                        <motion.button
+                            key={activeData.id}
+                            variants={SlideRight(0.2)}
+                            initial="hidden"
+                            animate="show"
+                            exit="exit"
+                            className='cursor-pointer shadow-2xl hover:scale-105 transition-transform duration-500 px-5 py-3 bg-green-600 rounded-md text-white mt-10'>
+                            Cobain Sekarang
+                        </motion.button>
+                    </AnimatePresence>
+
                     <div className='flex items-center justify-center mt-2'>
                         <div className='h-0.5 bg-white w-30'></div>
                         <h2 className='px-5 text-xl font-merienda text-white'>Rekomendasi Rasa Terbaik</h2>
@@ -79,10 +136,12 @@ const Hero = () => {
                         {HeroData.map((item) => (
 
                             <div key={item.id} onClick={() => handleActiveData(item)} className='text-center'>
-                                <img src={item.image} data-aos='fade-right' data-aos-delay='1000' alt="" className='hover:rotate-[5deg] w-70 h-45 fotoku hover:scale-105 transition-transform duration-1000 will-change-transform' />
+                                <div data-aos='fade-right' data-aos-delay='1000' >
+                                    <img src={item.image} alt="" className={`hover:rotate-[5deg] w-70 h-45 fotoku hover:scale-105 transition-transform duration-1000 will-change-transform ${activeData.image === item.image ? "opacity-100 scale-110" : "opacity-50"}`} />
+                                </div>
+
                                 <h2 className='text-gray-200 text-xs line-through font-merienda'>Rp.{item.diskon}</h2>
                                 <h2 className='text-white font-merienda'>{item.price}</h2>
-
                             </div>
 
                         ))}
