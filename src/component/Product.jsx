@@ -20,10 +20,7 @@ const Product = () => {
                     <img src={aleAnggur} alt="" className='w-full h-30' />
                     <p className='text-white '>Mangga</p>
                 </div>
-                <div className='container w-40 h-50 bg-primary'>
-                    <img src={aleStroberi} alt="" className='w-full h-30' />
-                    <p className='text-white '>Stroberi</p>
-                </div>
+
             </div>
         </div>
     )
