@@ -155,15 +155,6 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div key={`image-${activeData.id}`} data-aos="fade-left"
-                    data-aos-delay="500" className='absolute bottom-0 right-10 grid-1/2'>
-                    <img
-                        src={activeData.image}
-                        alt=""
-
-                        className="w-140 h-120 fotoku hover:scale-105 hover:rotate-5 motion-safe:animate-bounce hover:[animation-play-state:paused] transition-transform duration-700 ease-in-out"
-                    />
-                </div>
             </div>
 
 
