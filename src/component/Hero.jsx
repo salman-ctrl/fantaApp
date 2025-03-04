@@ -143,15 +143,7 @@ const Hero = () => {
                             </div>
 
                         ))}
-                        {/* <div data-aos='fade-right' data-aos-delay='1000'>
-                                <img src={aleMangga} alt="aleMangga" className='hover:rotate-[5deg] w-40 h-50 fotoku hover:scale-105 transition-transform duration-1000 will-change-transform' />
-                            </div>
-                            <div data-aos='fade-up' data-aos-delay='1000' className='ml-5'>
-                                <img src={aleJeruk} alt="" className='w-60  hover:rotate-4 h-50 fotoku  hover:scale-105 transition-transform duration-500' />
-                            </div>
-                            <div data-aos='fade-left' data-aos-delay='1000'>
-                                <img src={aleAnggur} alt="" className='w-60 h-50 fotoku hover:rotate-5 hover:scale-105 transition-transform duration-500' />
-                            </div> */}
+
                     </div>
                 </div>
 
