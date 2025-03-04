@@ -6,9 +6,12 @@ import Product from "./component/Product"
 function App() {
   return (
     <>
-      <Hero />
-      <Product />
-      <Information />
+      <div className='h-auto bg-gray-200'>
+        <Hero />
+        <Product />
+        <Information />
+      </div>
+
     </>
   )
 }

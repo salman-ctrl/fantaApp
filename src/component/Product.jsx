@@ -14,11 +14,15 @@ const Product = () => {
             <div className='h-full w-full flex justify-center pt-10 space-x-2.5 text-center'>
                 <div className='container w-40 h-50 shadow-lg'>
                     <img src={aleJeruk} alt="" className='w-full h-30' />
-                    <p className='text-white '>Jeruk</p>
+                    <p className='text-white font-merienda '>Jeruk</p>
                 </div>
                 <div className='container w-40 h-50 shadow-lg'>
                     <img src={aleAnggur} alt="" className='w-full h-30' />
-                    <p className='text-white '>Mangga</p>
+                    <p className='text-white font-merienda'>Mangga</p>
+                </div>
+                <div className='container w-40 h-50 shadow-lg'>
+                    <img src={aleStroberi} alt="" className='w-full h-30' />
+                    <p className='text-white font-merienda'>Mangga</p>
                 </div>
 
             </div>
