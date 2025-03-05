@@ -59,7 +59,7 @@ const Product = () => {
                         <img src={item.img} alt="" className=' pt-7 hover:scale-110 transition-all duration-500 hover:rotate-5 mx-auto' />
                         <h1 className='text-xl font-merienda'>{item.product}</h1>
                         <p className='text-sm text-gray-600  pt-3'>{item.deskripsi}</p>
-                        <button className='border-amber-500 border-2  text-amber-500  px-12 py-2 mt-5 rounded-sm transition-all duration-400 hover:bg-amber-500 '>Beli</button>
+                        <button className='border-amber-500 border-2  text-amber-500  px-12 py-2 mt-5 rounded-sm transition-all duration-400 cursor-pointer hover:scale-110 hover:text-white hover:bg-amber-500 '>Beli</button>
                     </div>
 
                 ))}
