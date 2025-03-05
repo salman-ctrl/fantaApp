@@ -11,7 +11,30 @@ import { div, h1, image, img } from 'framer-motion/client'
 
 
 const dataProduct = [
-
+    {
+        id: 1,
+        product: "Ale-Ale Jeruk",
+        deskripsi: "rasa jeruk yang segar",
+        img: aleJeruk,
+    },
+    {
+        id: 2,
+        product: "Ale-Ale Anggur",
+        deskripsi: "rasa Anggur yang segar",
+        img: aleAnggur,
+    },
+    {
+        id: 3,
+        product: "Ale-Ale Stroberi",
+        deskripsi: "rasa Stroberi yang segar",
+        img: aleStroberi,
+    },
+    {
+        id: 3,
+        product: "Ale-Ale Jambu",
+        deskripsi: "rasa Jambu yang segar",
+        img: aleJambu,
+    },
     {
         id: 3,
         product: "Ale-Ale Markisa",
