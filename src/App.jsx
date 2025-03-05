@@ -6,7 +6,7 @@ import Product from "./component/Product"
 function App() {
   return (
     <>
-      <div className='h-auto bg-gray-200'>
+      <div className='min-h-screen relative bg-gray-100'>
         <Hero />
         <Product />
         <Information />
