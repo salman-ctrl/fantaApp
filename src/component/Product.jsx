@@ -53,19 +53,18 @@ const Product = () => {
     return (
         <div className='h-auto w-screen overflow-hidden '>
             <h2 className='text-4xl font-merienda text-center pt-30'>Produk Kami</h2>
-            <div className='place-items-center mt-12 grid grid-cols-3'>
-                {dataProduct.map((item) => (
-                    <div className='bg-white shadow-lg pb-7 mt-10 text-center rounded-xl w-72 '>
-                        <img src={item.img} alt="" className=' pt-7 hover:scale-110 transition-all duration-500 hover:rotate-5 mx-auto' />
-                        <h1 className='text-xl font-merienda'>{item.product}</h1>
-                        <p className='text-sm text-gray-600  pt-3'>{item.deskripsi}</p>
-                        <button className='border-amber-500 border-2  text-amber-500  px-12 py-2 mt-5 rounded-sm transition-all duration-400 cursor-pointer hover:scale-110 hover:text-white hover:bg-amber-500 '>Beli</button>
-                    </div>
+            {dataProduct.map((item) => (
+                <div className='bg-white shadow-lg pb-7 mt-10 text-center rounded-xl w-72 '>
+                    <img src={item.img} alt="" className=' pt-7 hover:scale-110 transition-all duration-500 hover:rotate-5 mx-auto' />
+                    <h1 className='text-xl font-merienda'>{item.product}</h1>
+                    <p className='text-sm text-gray-600  pt-3'>{item.deskripsi}</p>
+                    <button className='border-amber-500 border-2  text-amber-500  px-12 py-2 mt-5 rounded-sm transition-all duration-400 cursor-pointer hover:scale-110 hover:text-white hover:bg-amber-500 '>Beli</button>
+                </div>
 
-                ))}
-            </div>
-
+            ))}
         </div>
+
+        </div >
     )
 }
 
