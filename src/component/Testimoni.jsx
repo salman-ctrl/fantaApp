@@ -18,7 +18,7 @@ const Testimoni = () => {
                 <div>
                     {dataClient.map((item) => (
                         <div key={dataClient.id}>
-                            <h1>{dataClient.name}</h1>
+                            <h1 className='text-center font-merienda text-white'>{dataClient.name}</h1>
                             <p>{dataClient.age}</p>
                         </div>
                     ))}
