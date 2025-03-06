@@ -19,6 +19,7 @@ const Testimoni = () => {
                     {dataClient.map((item) => (
                         <div key={dataClient.id}>
                             <h1>{dataClient.name}</h1>
+                            <p>{dataClient.age}</p>
                         </div>
                     ))}
                 </div>
