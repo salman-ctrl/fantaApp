@@ -9,7 +9,6 @@ import { div, h1, image, img } from 'framer-motion/client'
 
 
 
-
 const dataProduct = [
     {
         id: 1,
@@ -63,10 +62,10 @@ const Product = () => {
                     </div>
 
                 ))}
-            </div>
 
-        </div>
-    )
+
+            </div>
+            )
 }
 
-export default Product
+            export default Product
