@@ -62,10 +62,10 @@ const Product = () => {
                     </div>
 
                 ))}
-
-
             </div>
-            )
+
+        </div>
+    )
 }
 
-            export default Product
+export default Product
