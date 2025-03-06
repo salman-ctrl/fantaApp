@@ -1,3 +1,4 @@
+import { data } from 'framer-motion/client'
 import React from 'react'
 
 const dataClient = [
@@ -10,13 +11,24 @@ const dataClient = [
 
 const Testimoni = () => {
     return (
-        <div>
-            <h1>Apa kata mereka?</h1>
+        <>
+            <div>
+                <h1>Apa kata mereka?</h1>
 
+                <div>
+                    {dataClient.map((item) => (
+                        <div key={dataClient.id}>
+                            <h1>{dataClient.name}</h1>
+                        </div>
+                    ))}
+                </div>
+            </div>
             <div>
 
             </div>
-        </div>
+
+        </>
+
     )
 }
 
