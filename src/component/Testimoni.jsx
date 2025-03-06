@@ -20,6 +20,7 @@ const Testimoni = () => {
                         <div key={dataClient.id}>
                             <h1 className='text-center text-lg font-merienda text-white'>{dataClient.name}</h1>
                             <p className='text-sm'>{dataClient.age}</p>
+                            <p className='text-sm'>{dataClient.age}</p>
                         </div>
                     ))}
                 </div>
