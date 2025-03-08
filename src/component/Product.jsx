@@ -102,11 +102,9 @@ const Product = () => {
                         <button className='border-amber-500 border-2  text-amber-500  px-12 py-2 mt-5 rounded-sm transition-all duration-400 cursor-pointer hover:scale-110 hover:text-white hover:bg-amber-500 '>Beli</button>
                     </div>
 
-                ))}
-            </div>
-
+                )
         </div>
-    )
+            )
 }
 
-export default Product
+            export default Product
