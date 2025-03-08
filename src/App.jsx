@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './component/Hero'
 import Information from './component/Information'
 import Product from "./component/Product"
+import Testimoni from './component/Testimoni'
 
 function App() {
   return (
@@ -10,6 +11,11 @@ function App() {
         <Hero />
         <Product />
         <Information />
+        <Testimoni />
+      </div>
+
+      <div>
+
       </div>
 
     </>
