@@ -65,7 +65,10 @@ const dataProduct = [
         img: aleJambu,
     },
     {
-
+        id: 5,
+        product: "Ale-Ale Markisa",
+        deskripsi: "rasa Markisa yang segar",
+        img: aleMarkisa,
     },
     {
         id: 6,
