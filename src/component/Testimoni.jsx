@@ -1,5 +1,5 @@
-import { data } from 'framer-motion/client'
-import React, { useState } from 'react'
+import React from 'react'
+import { FaStar } from "react-icons/fa";
 import asep from '../assets/dataClient/asep.jpg';
 import burhan from '../assets/dataClient/burhan.jpg';
 import jamal from '../assets/dataClient/jamal.jpg';
@@ -11,13 +11,15 @@ import siti from '../assets/dataClient/siti.jpg';
 import sukiman from '../assets/dataClient/sukiman.jpg';
 import sukmo from '../assets/dataClient/sukmo.jpg';
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const dataClient = [
     {
         id: 1,
         name: 'Asep',
         age: 25,
-        deskripsi: "Rasanya lumayan enak, tapi agak terlalu manis buat saya. Lebih suka yang rasa jeruk sih!",
+        deskripsi: "Rasanya lumayan enak, tapi agak terlalu manis buat saya!",
         skor: 3,
         varianFavorit: "Ale-Ale Jeruk",
         img: asep
@@ -105,17 +107,15 @@ const dataClient = [
     }
 ];
 
-
-
-
 const Testimoni = () => {
-
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
         responsive: [
             {
                 breakpoint: 1024,
@@ -125,40 +125,46 @@ const Testimoni = () => {
                 breakpoint: 768,
                 settings: { slidesToShow: 1, slidesToScroll: 1 }
             }
-
         ]
-    }
-
+    };
 
     return (
-        <>
-            <div className='mt-30 '>
-                <h1 className='justify-center flex font-merienda text-3xl'>Apa kata mereka?</h1>
+        <div className="py-16 bg-gray-300 px-4 w-full" id="testimoni">
+            <h1 className="text-center font-merienda text-3xl mb-16">Apa kata mereka?</h1>
 
-                <div className='flex space-x-20 mb-40 mt-40 justify-center'>
-                    <Slider {...settings}>
-                        {dataClient.map((item) => (
-                            <div key={item.id} className='h-72 items-center flex flex-col w-96 bg-primary rounded-md'>
-                                <img src={item.img} alt="" className='border-amber-500 border-2 w-40 -mt-20 h-40     rounded-full' />
-                                <h1 className='text-center text-lg font-merienda text-white mt-7'>{item.name}</h1>
-                                <p className='text-sm'>{item.age}</p>
-                                <p className='text-center px-10 font-merienda text-white'>{item.deskripsi}</p>
-
-                                <p className='mt-2 '>
-                                    Best Varian :  {item.varianFavorit}
+            <div className="w-full mt-20 px-20 mx-auto">
+                <Slider {...settings}>
+                    {dataClient.map((item) => (
+                        <div key={item.id} className="px-4 pt-20">
+                            <div className="h-72 items-center flex flex-col bg-primary rounded-md p-4 relative z-50">
+                                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
+                                    <img
+                                        src={item.img}
+                                        alt={`Testimoni dari ${item.name}`}
+                                        className="border-amber-500 border-2 w-40 h-40 rounded-full "
+                                    />
+                                </div>
+                                <h1 className="text-center text-lg font-merienda  text-white mt-24">{item.name}</h1>
+                                <p className="text-sm text-white/80">{item.age} tahun</p>
+                                <p className="text-center px-2 font-merienda text-white mt-2 flex-grow">{item.deskripsi}</p>
+                                <p className="flex">
+                                    {[...Array(5)].map((_, lb) => (
+                                        <FaStar
+                                            key={lb}
+                                            className={lb < item.skor ? "text-yellow-200 text-lg" : "text-gray-500 text-lg"}
+                                        />
+                                    ))}
+                                </p>
+                                <p className="mt-2 text-amber-300 font-medium">
+                                    Varian Favorit: {item.varianFavorit}
                                 </p>
                             </div>
-                        ))}
-                    </Slider>
-                </div>
+                        </div>
+                    ))}
+                </Slider>
             </div>
-            <div>
+        </div>
+    );
+};
 
-            </div>
-
-        </>
-
-    )
-}
-
-export default Testimoni
+export default Testimoni;

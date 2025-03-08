@@ -7,7 +7,7 @@ import Testimoni from './component/Testimoni'
 function App() {
   return (
     <>
-      <div className='min-h-screen relative bg-gray-100'>
+      <div className='min-h-screen relative overflow-hidden bg-gray-100'>
         <Hero />
         <Product />
         <Information />

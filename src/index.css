@@ -22,3 +22,14 @@
     filter: drop-shadow(4px 2px 20px rgba(0, 0, 0, 0.4));
 
 }
+
+.slick-prev,
+.slick-next {
+    z-index: 50;
+    /* Memastikan tombol ada di atas */
+    width: 50px;
+    /* Lebar tombol */
+    height: 50px;
+    background-color: red;
+    /* Tinggi tombol */
+}
