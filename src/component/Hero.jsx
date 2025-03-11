@@ -47,7 +47,17 @@ const HeroData = [
         diskon: "70.000"
 
     },
+    {
+        id: 2,
+        title: "Ale Jeruk",
+        image: aleJeruk,
+        description: "Ale Jeruk adalah minuman beralkohol yang terbuat dari buah Jeruk",
+        price: "Rp. 20.000",
+        bgColor: "#FF8C00",
+        diskon: "40.000"
 
+
+    },
     {
         id: 3,
         title: "Ale Anggur",
