@@ -1,5 +1,6 @@
-import React from 'react'
-import { FaStar } from "react-icons/fa";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; import { FaStar } from "react-icons/fa";
 import asep from '../assets/dataClient/asep.jpg';
 import burhan from '../assets/dataClient/burhan.jpg';
 import jamal from '../assets/dataClient/jamal.jpg';
@@ -19,7 +20,7 @@ const dataClient = [
         id: 1,
         name: 'Asep',
         age: 25,
-        deskripsi: "Rasanya lumayan enak, tapi agak terlalu manis buat saya!",
+        deskripsi: "Rasanya enak sih, tapi manisnya kaya hidup aku pas gajian!",
         skor: 3,
         varianFavorit: "Ale-Ale Jeruk",
         img: asep
@@ -28,7 +29,7 @@ const dataClient = [
         id: 2,
         name: 'Burhan',
         age: 30,
-        deskripsi: "Seger banget, cocok diminum pas siang hari. Rasa anggur favorit saya!",
+        deskripsi: "Seger kayak mandi ujan, tapi ini bisa diminum!",
         skor: 4,
         varianFavorit: "Ale-Ale Anggur",
         img: burhan
@@ -37,7 +38,7 @@ const dataClient = [
         id: 3,
         name: 'Jamal',
         age: 28,
-        deskripsi: "Enak sih, tapi menurut saya agak kurang berasa buahnya. Lebih suka varian leci.",
+        deskripsi: "Kurang berasa buahnya, tapi tetep lebih berasa dari perhatian doi.",
         skor: 3,
         varianFavorit: "Ale-Ale Leci",
         img: jamal
@@ -46,7 +47,7 @@ const dataClient = [
         id: 4,
         name: 'Johan',
         age: 27,
-        deskripsi: "Minuman wajib buat nemenin kerja! Rasa mangga favorit saya.",
+        deskripsi: "Temen setia pas begadang, ga bisa pisah sama yang rasa mangga!",
         skor: 5,
         varianFavorit: "Ale-Ale Mangga",
         img: johan
@@ -55,7 +56,7 @@ const dataClient = [
         id: 5,
         name: 'Leha',
         age: 23,
-        deskripsi: "Rasa guavanya enak, segarnya pas! Anak-anak saya juga suka.",
+        deskripsi: "Anak-anak suka, emak juga suka, bapaknya mah ngikut aja!",
         skor: 4,
         varianFavorit: "Ale-Ale Guava",
         img: leha
@@ -64,7 +65,7 @@ const dataClient = [
         id: 6,
         name: 'Mael',
         age: 31,
-        deskripsi: "Menurut saya biasa aja, tapi lumayan kalau lagi haus.",
+        deskripsi: "Biasa aja, tapi kalau gratis sih enak banget!",
         skor: 3,
         varianFavorit: "Ale-Ale Melon",
         img: mael
@@ -73,7 +74,7 @@ const dataClient = [
         id: 7,
         name: 'Neneng',
         age: 26,
-        deskripsi: "Bener-bener seger, rasa stroberinya enak dan nggak terlalu manis!",
+        deskripsi: "Rasanya pas, stroberinya ga lebay, beda sama mantan!",
         skor: 5,
         varianFavorit: "Ale-Ale Stroberi",
         img: neneng
@@ -82,7 +83,7 @@ const dataClient = [
         id: 8,
         name: 'Siti',
         age: 29,
-        deskripsi: "Suka banget sama rasa kelapanya, beda dari yang lain!",
+        deskripsi: "Kelapanya berasa banget, kayak lagi liburan di pantai!",
         skor: 4,
         varianFavorit: "Ale-Ale Kelapa",
         img: siti
@@ -91,7 +92,7 @@ const dataClient = [
         id: 9,
         name: 'Sukiman',
         age: 34,
-        deskripsi: "Minuman yang cukup oke buat harga segini, tapi kurang dingin kurang mantap.",
+        deskripsi: "Kurang dingin, kurang greget. Tapi tetep lumayan lah!",
         skor: 3,
         varianFavorit: "Ale-Ale Lemon",
         img: sukiman
@@ -100,14 +101,21 @@ const dataClient = [
         id: 10,
         name: 'Sukmo',
         age: 32,
-        deskripsi: "Gue doyan banget rasa apel, apalagi kalau diminum dingin!",
+        deskripsi: "Minum Ale-Ale Apel dingin itu nikmat yang hakiki!",
         skor: 5,
         varianFavorit: "Ale-Ale Apel",
         img: sukmo
     }
 ];
 
+
 const Testimoni = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+    }, []);
     const settings = {
         dots: true,
         infinite: true,
@@ -134,8 +142,13 @@ const Testimoni = () => {
 
             <div className="w-full mt-20 px-20 mx-auto">
                 <Slider {...settings}>
-                    {dataClient.map((item) => (
-                        <div key={item.id} className="px-4 pt-20">
+                    {dataClient.map((item, index) => (
+                        <div
+                            key={index}
+                            data-aos="fade-up" // Animasi naik ke atas saat muncul
+                            data-aos-delay={index * 200}
+
+                            className="px-4 pt-20">
                             <div className="h-72 items-center flex flex-col bg-primary rounded-md p-4 relative z-50">
                                 <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
                                     <img
@@ -158,10 +171,13 @@ const Testimoni = () => {
                                 <p className="mt-2 text-amber-300 font-medium">
                                     Varian Favorit: {item.varianFavorit}
                                 </p>
+
                             </div>
+
                         </div>
                     ))}
                 </Slider>
+                <div className="h-50"></div>
             </div>
         </div>
     );

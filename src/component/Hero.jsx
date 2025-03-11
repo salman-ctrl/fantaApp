@@ -47,17 +47,7 @@ const HeroData = [
         diskon: "70.000"
 
     },
-    {
-        id: 2,
-        title: "Ale Jeruk",
-        image: aleJeruk,
-        description: "Ale Jeruk adalah minuman beralkohol yang terbuat dari buah Jeruk",
-        price: "Rp. 20.000",
-        bgColor: "#FF8C00",
-        diskon: "40.000"
 
-
-    },
     {
         id: 3,
         title: "Ale Anggur",
@@ -85,7 +75,7 @@ const Hero = () => {
     }, [activeData])
 
     return (
-        <motion.div animate={{ backgroundColor: activeData.bgColor }} transition={{ duration: 0.7 }} className=' h-[90vh] relative'>
+        <motion.div animate={{ backgroundColor: activeData.bgColor }} transition={{ duration: 0.7 }} className=' h-[100vh] relative'>
             <Navbar />
             <div className='grid grid-cols-2  h-full px-20'>
                 <div className='mt-30 '>
