@@ -100,16 +100,6 @@ const Hero = () => {
                                 className='text-5xl text-white font-merienda font-bold'>{activeData.title}</motion.h1>
                         </AnimatePresence>
 
-                        <AnimatePresence mode='wait' >
-                            <motion.h1
-                                key={activeData.id}
-                                variants={SlideRight(0.4)}
-                                initial="hidden"
-                                animate="show"
-                                exit="exit"
-                                className='pt-7 text-2xl font-merienda text-white'>
-                                Minuman favorit yang siap nemenin harimu! Pilih rasa favoritmu dan rasakan keseruannya</motion.h1>
-                        </AnimatePresence>
 
                     </div>
                     <AnimatePresence mode='wait'>
