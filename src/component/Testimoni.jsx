@@ -105,7 +105,25 @@ const dataClient = [
         skor: 5,
         varianFavorit: "Ale-Ale Apel",
         img: sukmo
-    }
+    },
+    {
+        id: 10,
+        name: 'Sukmo',
+        age: 32,
+        deskripsi: "Minum Ale-Ale Apel dingin itu nikmat yang hakiki!",
+        skor: 5,
+        varianFavorit: "Ale-Ale Apel",
+        img: sukmo
+    },
+    {
+        id: 10,
+        name: 'Sukmo',
+        age: 32,
+        deskripsi: "Minum Ale-Ale Apel dingin itu nikmat yang hakiki!",
+        skor: 5,
+        varianFavorit: "Ale-Ale Apel",
+        img: sukmo
+    },
 ];
 
 
@@ -153,7 +171,7 @@ const Testimoni = () => {
                                 <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
                                     <img
                                         src={item.img}
-                                        alt={`Testimoni dari ${item.name}`}
+                                        alt={`Test imoni dari ${item.name}`}
                                         className="border-amber-500 border-2 w-40 h-40 rounded-full "
                                     />
                                 </div>
