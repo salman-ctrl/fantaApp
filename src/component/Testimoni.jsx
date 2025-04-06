@@ -35,6 +35,24 @@ const dataClient = [
         img: burhan
     },
     {
+        id: 2,
+        name: 'Burhan',
+        age: 30,
+        deskripsi: "Seger kayak mandi ujan, tapi ini bisa diminum!",
+        skor: 4,
+        varianFavorit: "Ale-Ale Anggur",
+        img: burhan
+    },
+    {
+        id: 2,
+        name: 'Burhan',
+        age: 30,
+        deskripsi: "Seger kayak mandi ujan, tapi ini bisa diminum!",
+        skor: 4,
+        varianFavorit: "Ale-Ale Anggur",
+        img: burhan
+    },
+    {
         id: 3,
         name: 'Jamal',
         age: 28,
