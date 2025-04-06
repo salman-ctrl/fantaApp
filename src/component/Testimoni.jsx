@@ -106,24 +106,6 @@ const dataClient = [
         varianFavorit: "Ale-Ale Apel",
         img: sukmo
     },
-    {
-        id: 10,
-        name: 'Sukmo',
-        age: 32,
-        deskripsi: "Minum Ale-Ale Apel dingin itu nikmat yang hakiki!",
-        skor: 5,
-        varianFavorit: "Ale-Ale Apel",
-        img: sukmo
-    },
-    {
-        id: 10,
-        name: 'Sukmo',
-        age: 32,
-        deskripsi: "Minum Ale-Ale Apel dingin itu nikmat yang hakiki!",
-        skor: 5,
-        varianFavorit: "Ale-Ale Apel",
-        img: sukmo
-    },
 ];
 
 
